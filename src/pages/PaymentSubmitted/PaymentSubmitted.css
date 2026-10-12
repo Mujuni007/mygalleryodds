@@ -1,0 +1,85 @@
+.payment-submitted-page {
+  min-height: 100vh;
+}
+
+.payment-submitted-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.payment-submitted-main {
+  display: grid;
+  min-height: calc(100vh - 82px);
+  place-items: center;
+  padding: 40px 24px;
+}
+
+.payment-submitted-card {
+  width: min(100%, 590px);
+  max-width: 590px;
+  padding: 44px 36px;
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  background: var(--surface);
+  box-shadow: var(--shadow-pop);
+  text-align: center;
+}
+
+.payment-success-mark {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 58px;
+  height: 58px;
+  margin: 0 auto 18px;
+  border-radius: 50%;
+  background: var(--success-tint);
+  color: var(--success);
+  font-size: 1.8rem;
+  font-weight: 800;
+}
+
+.payment-submitted-card h1 {
+  margin: 18px 0 12px;
+  font-size: 1.75rem;
+}
+
+.payment-submitted-card p {
+  margin-bottom: 28px;
+  color: var(--ink-soft);
+  font-size: 1.02rem;
+}
+
+.payment-submitted-card h1,
+.payment-submitted-card p {
+  overflow-wrap: anywhere;
+}
+
+@media (max-width: 600px) {
+  .payment-submitted-header {
+    padding: 18px 20px;
+  }
+
+  .payment-submitted-card {
+    padding: 34px 22px;
+  }
+
+  .payment-submitted-card h1 {
+    font-size: 1.45rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .payment-submitted-main {
+    padding: 24px 16px;
+  }
+
+  .payment-submitted-card {
+    width: 100%;
+    padding: 28px 18px;
+  }
+}

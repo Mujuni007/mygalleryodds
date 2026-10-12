@@ -1,0 +1,425 @@
+/* ==========================================================================
+   GalleyODD design tokens
+   Palette takes the brief's own direction (professional purple/indigo,
+   rounded cards, generous spacing) and grounds it in the name's printing-
+   trade root: a "galley" is a proof sheet of typeset columns, so the mark
+   and rule-lines throughout nod to that without spelling it out.
+   ========================================================================== */
+:root {
+  /* Color */
+  --ink: #17132a;
+  --ink-soft: #55506b;
+  --ink-faint: #8b86a0;
+  --paper: #f7f6fb;
+  --surface: #ffffff;
+  --border: #e6e3f0;
+  --border-strong: #d3cee6;
+
+  --indigo: #4f3df5;
+  --indigo-dark: #3c2cd1;
+  --indigo-tint: #efecfe;
+  --plum: #9233ea;
+
+  --success: #0f7a5b;
+  --success-tint: #e5f6ef;
+  --error: #c23b2f;
+  --error-tint: #fbeae8;
+  --amber: #b06a12;
+  --amber-tint: #fdf1e2;
+
+  /* Type */
+  --font-display: "Sora", "Segoe UI", sans-serif;
+  --font-body: "Inter", "Segoe UI", sans-serif;
+
+  /* Layout */
+  --radius-sm: 8px;
+  --radius-md: 14px;
+  --radius-lg: 22px;
+  --shadow-card: 0 1px 2px rgba(23, 19, 42, 0.04), 0 12px 32px -16px rgba(23, 19, 42, 0.18);
+  --shadow-pop: 0 20px 48px -20px rgba(79, 61, 245, 0.35);
+  --max-width: 1180px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  min-height: 100%;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: 100%;
+  margin: 0;
+  font-family: var(--font-body);
+  color: var(--ink);
+  background: var(--paper);
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-display);
+  margin: 0;
+  color: var(--ink);
+  letter-spacing: -0.01em;
+}
+
+p {
+  margin: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font-family: inherit;
+}
+
+input,
+textarea,
+select,
+button {
+  max-width: 100%;
+}
+
+input,
+textarea,
+select {
+  min-width: 0;
+}
+
+img,
+video,
+svg {
+  max-width: 100%;
+}
+
+img,
+video {
+  height: auto;
+}
+
+main,
+section,
+article,
+form {
+  min-width: 0;
+}
+
+pre,
+p,
+h1,
+h2,
+h3,
+h4 {
+  overflow-wrap: anywhere;
+}
+
+a {
+  color: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+:focus-visible {
+  outline: 2px solid var(--indigo);
+  outline-offset: 2px;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  text-align: left;
+}
+
+.field label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+}
+
+.field label small {
+  margin-left: 4px;
+  font-size: 0.72rem;
+  font-weight: 400;
+  color: var(--ink-faint);
+}
+
+.field input {
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  border: 1.5px solid var(--border-strong);
+  font-size: 0.95rem;
+  background: var(--surface);
+  color: var(--ink);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.field input:focus {
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 4px var(--indigo-tint);
+  outline: none;
+}
+
+.password-input-wrap {
+  position: relative;
+  width: 100%;
+}
+
+.password-input-wrap input {
+  width: 100%;
+  padding-right: 72px;
+}
+
+.password-visibility-toggle {
+  position: absolute;
+  top: 50%;
+  right: 8px;
+  transform: translateY(-50%);
+  padding: 6px;
+  border: 0;
+  background: transparent;
+  color: var(--indigo);
+  font: inherit;
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.password-visibility-toggle:hover {
+  color: var(--indigo-dark);
+}
+
+.phone-input {
+  display: grid;
+  grid-template-columns: minmax(116px, 0.38fr) minmax(0, 1fr);
+  gap: 8px;
+}
+
+.phone-input select {
+  min-width: 0;
+  padding: 12px 8px;
+  border: 1.5px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  background: var(--surface);
+  color: var(--ink);
+  font-size: 0.9rem;
+}
+
+.phone-input select:focus {
+  border-color: var(--indigo);
+  box-shadow: 0 0 0 4px var(--indigo-tint);
+  outline: none;
+}
+
+.field-error {
+  font-size: 0.8rem;
+  color: var(--error);
+  min-height: 1em;
+}
+
+.field-hint {
+  font-size: 0.78rem;
+  color: var(--ink-faint);
+  min-height: 1em;
+}
+
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  border: none;
+  border-radius: var(--radius-sm);
+  padding: 12px 20px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  transition: transform 0.12s ease, box-shadow 0.12s ease, background 0.15s ease;
+}
+
+.btn:active {
+  transform: translateY(1px);
+}
+
+.btn-primary {
+  background: var(--indigo);
+  color: #ffffff;
+  box-shadow: var(--shadow-pop);
+}
+
+.btn-primary:hover {
+  background: var(--indigo-dark);
+}
+
+.btn-primary:disabled {
+  background: var(--border-strong);
+  color: var(--ink-faint);
+  box-shadow: none;
+  cursor: not-allowed;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--indigo);
+  border: 1.5px solid var(--border-strong);
+}
+
+.btn-ghost:hover {
+  border-color: var(--indigo);
+  background: var(--indigo-tint);
+}
+
+.btn-block {
+  width: 100%;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 600;
+}
+
+.badge-success {
+  background: var(--success-tint);
+  color: var(--success);
+}
+
+.badge-amber {
+  background: var(--amber-tint);
+  color: var(--amber);
+}
+
+.badge-neutral {
+  background: var(--indigo-tint);
+  color: var(--indigo-dark);
+}
+
+.rule {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 0;
+}
+
+@media (max-width: 640px) {
+  .home-header,
+  .payment-header,
+  .payment-submitted-header,
+  .sub-header,
+  .communication-header,
+  .odds-header,
+  .dash-header {
+    gap: 12px;
+    padding: 16px 18px;
+  }
+
+  .home-header-actions,
+  .communication-header-actions,
+  .odds-actions,
+  .dash-header-right {
+    flex-wrap: wrap;
+  }
+
+  .auth-panel {
+    padding: 28px 20px;
+  }
+
+  .home-main,
+  .payment-main,
+  .communication-main,
+  .sub-main,
+  .odds-main,
+  .dash-main {
+    padding-top: 32px;
+    padding-bottom: 52px;
+  }
+
+  .dash-main,
+  .home-main,
+  .payment-main,
+  .communication-main,
+  .sub-main,
+  .odds-main {
+    padding-right: 18px;
+    padding-left: 18px;
+  }
+}
+
+@media (max-width: 400px) {
+  .btn {
+    padding-right: 14px;
+    padding-left: 14px;
+    font-size: 0.88rem;
+  }
+
+  .phone-input {
+    grid-template-columns: minmax(100px, 0.42fr) minmax(0, 1fr);
+  }
+
+  .auth-brand-copy h1 {
+    font-size: 1.65rem;
+  }
+
+  .communication-empty,
+  .communication-message,
+  .payment-card,
+  .plan-card,
+  .odds-card {
+    padding: 18px 16px;
+  }
+}
+
+@media (max-width: 640px) {
+  input:not([type="file"]),
+  textarea,
+  select {
+    font-size: 16px;
+  }
+
+  .payment-submitted-card {
+    width: 100%;
+  }
+}
+
+@media (pointer: coarse) {
+  button,
+  .btn,
+  input:not([type="file"]),
+  select {
+    min-height: 44px;
+  }
+
+  .receipt-upload input {
+    min-height: 0;
+  }
+
+  textarea {
+    font-size: 16px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  * {
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+  }
+}

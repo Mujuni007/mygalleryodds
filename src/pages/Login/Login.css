@@ -1,0 +1,90 @@
+.login-head h2 {
+  font-size: 1.6rem;
+  margin-bottom: 6px;
+}
+
+.login-sub {
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  margin-bottom: 24px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  margin-bottom: 20px;
+}
+
+.login-email-hint {
+  color: var(--ink-faint);
+  font-size: 0.75em;
+  font-weight: 400;
+}
+
+.login-switch {
+  text-align: center;
+  font-size: 0.9rem;
+  color: var(--ink-soft);
+}
+
+.login-switch a {
+  color: var(--indigo);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.login-switch a:hover {
+  text-decoration: underline;
+}
+
+.login-rule {
+  margin: 22px 0;
+}
+
+.login-admin-link {
+  display: block;
+  text-align: center;
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--ink-soft);
+  text-decoration: none;
+}
+
+.login-admin-link:hover {
+  color: var(--indigo);
+}
+
+.login-reset-link {
+  display: block;
+  margin: -6px auto 20px;
+  border: 0;
+  padding: 0;
+  background: transparent;
+  color: var(--indigo);
+  cursor: pointer;
+  font: inherit;
+  font-size: 0.88rem;
+  font-weight: 600;
+}
+
+.login-reset-link:hover:not(:disabled) {
+  text-decoration: underline;
+}
+
+.login-reset-link:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.login-whatsapp-help {
+  width: 100%;
+  margin: 0 0 20px;
+  background: #168a68;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.login-whatsapp-help:hover {
+  background: #117254;
+}

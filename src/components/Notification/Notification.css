@@ -1,0 +1,66 @@
+.notification {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 14px;
+  border-radius: var(--radius-sm);
+  font-size: 0.9rem;
+  font-weight: 500;
+  border: 1px solid transparent;
+}
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.notification-message {
+  flex: 1;
+  text-align: left;
+}
+
+.notification-dismiss {
+  background: none;
+  border: none;
+  font-size: 1.1rem;
+  line-height: 1;
+  color: inherit;
+  opacity: 0.6;
+  padding: 0 2px;
+}
+
+.notification-dismiss:hover {
+  opacity: 1;
+}
+
+.notification-success {
+  background: var(--success-tint);
+  color: var(--success);
+  border-color: rgba(15, 122, 91, 0.18);
+}
+
+.notification-success .notification-dot {
+  background: var(--success);
+}
+
+.notification-error {
+  background: var(--error-tint);
+  color: var(--error);
+  border-color: rgba(194, 59, 47, 0.18);
+}
+
+.notification-error .notification-dot {
+  background: var(--error);
+}
+
+.notification-info {
+  background: var(--indigo-tint);
+  color: var(--indigo-dark);
+  border-color: rgba(79, 61, 245, 0.18);
+}
+
+.notification-info .notification-dot {
+  background: var(--indigo);
+}

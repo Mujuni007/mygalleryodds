@@ -1,0 +1,217 @@
+.sub-page {
+  min-height: 100vh;
+}
+
+.sub-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+
+.sub-main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 56px 24px 80px;
+}
+
+.sub-intro {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto 28px;
+}
+
+.sub-intro h1 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.sub-intro p {
+  color: var(--ink-soft);
+  font-size: 1.05rem;
+}
+
+.sub-current {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.sub-current-price {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.odds-links {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin: 0 auto 28px;
+}
+
+.odds-link {
+  border: 1px solid var(--border-strong);
+  border-radius: var(--radius-sm);
+  padding: 10px 14px;
+  background: var(--surface);
+  font-size: 0.85rem;
+  font-weight: 700;
+}
+
+.odds-link-free {
+  color: var(--success);
+}
+
+.odds-link-premium {
+  color: var(--amber);
+}
+
+.odds-link:hover {
+  background: var(--indigo-tint);
+}
+
+.plan-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(260px, 1fr));
+  gap: 24px;
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.plan-card {
+  position: relative;
+  background: var(--surface);
+  border: 1.5px solid var(--border);
+  border-radius: var(--radius-lg);
+  padding: 32px 28px;
+  box-shadow: var(--shadow-card);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.plan-card-highlight {
+  border-color: var(--indigo);
+  box-shadow: var(--shadow-pop);
+}
+
+.plan-card-current {
+  border-color: var(--success);
+}
+
+.plan-tag {
+  position: absolute;
+  top: -13px;
+  left: 28px;
+  background: var(--indigo);
+  color: #ffffff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 4px 12px;
+  border-radius: 999px;
+}
+
+.plan-tag-current {
+  left: auto;
+  right: 28px;
+  background: var(--success);
+}
+
+.plan-card h2 {
+  font-size: 1.3rem;
+}
+
+.plan-price {
+  display: flex;
+  align-items: baseline;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.plan-price-amount {
+  font-family: var(--font-display);
+  font-size: 2.4rem;
+  font-weight: 700;
+}
+
+.plan-price-alternate {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+  font-weight: 600;
+}
+
+.plan-price-cadence {
+  color: var(--ink-soft);
+  font-size: 0.9rem;
+}
+
+.plan-features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 0.92rem;
+  color: var(--ink-soft);
+}
+
+.plan-features li {
+  padding-left: 22px;
+  position: relative;
+}
+
+.plan-features li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 7px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--indigo);
+}
+
+@media (max-width: 620px) {
+  .odds-links {
+    align-items: stretch;
+    flex-direction: column;
+    max-width: 280px;
+  }
+
+  .plan-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .sub-header {
+    padding: 18px 20px;
+  }
+}
+
+@media (max-width: 400px) {
+  .sub-main {
+    padding-top: 36px;
+  }
+
+  .sub-intro h1 {
+    font-size: 1.65rem;
+  }
+
+  .plan-card {
+    padding: 28px 18px;
+  }
+
+  .plan-price {
+    flex-wrap: wrap;
+  }
+
+  .plan-price-amount {
+    font-size: 2rem;
+  }
+}
